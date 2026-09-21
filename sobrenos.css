@@ -385,3 +385,66 @@ button {
         }
     }
 }
+.hero-banner {
+    position: relative;
+    padding-block: 90px 120px;
+    background: linear-gradient(rgba(30, 12, 5, 0.6), rgba(30, 12, 5, 0.6)),
+                url('Gemini_Generated_Image_uirr85uirr85uirr.jpg') center/cover no-repeat;
+    color: var(--branco);
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+
+    @media (max-width: 768px) {
+        padding-block: 60px 80px;
+        clip-path: none;
+    }
+}
+
+.hero-box {
+    max-width: 580px;
+
+    @media (max-width: 768px) {
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+            font-size: 1.6rem;
+        }
+    }
+
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.92rem;
+        line-height: 1.6;
+        margin-bottom: 32px;
+        opacity: 0.9;
+
+        @media (max-width: 768px) {
+            font-size: 0.85rem;
+        }
+    }
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 2px solid var(--branco);
+    border-radius: 28px;
+    color: var(--branco);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: var(--branco);
+        color: var(--marrom-escuro);
+    }
+}
