@@ -1,7 +1,3 @@
-/* ================================
-   RESET E CONFIGURAÇÕES GERAIS
-   ================================ */
-
 :root {
     --bege: #f7f0e5;
     --bege-escuro: #e7d9ca;
@@ -44,18 +40,10 @@ button {
     font: inherit;
 }
 
-/* ================================
-   CLASSES REUTILIZÁVEIS
-   ================================ */
-
 .container {
     width: min(100% - 32px, var(--largura));
     margin-inline: auto;
 }
-
-/* ================================
-   CABEÇALHO
-   ================================ */
 
 .cabecalho {
     position: sticky;
@@ -132,4 +120,51 @@ button {
     color: var(--marrom);
     font-size: 1.7rem;
     cursor: pointer;
+}
+
+.hero {
+    min-height: 470px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("/assests/img_hero.svg");
+    background-size: cover;
+    background-position: center;
+    color: var(--branco);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(47, 19, 9, 0.58);
+}
+
+.hero-conteudo {
+    position: relative;
+    z-index: 1;
+    padding-block: 80px;
+}
+
+.hero h1 {
+    max-width: 650px;
+    margin-bottom: 22px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.12;
+}
+
+.hero p {
+    max-width: 850px;
+    font-size: clamp(1rem, 1.7vw, 1.25rem);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    left: -2%;
+    bottom: -1px;
+    width: 104%;
+    height: 62px;
+    background-color: var(--bege);
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
 }
