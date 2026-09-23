@@ -40,10 +40,6 @@ button {
     font: inherit;
 }
 
-/* ================================
-   CLASSES REUTILIZÁVEIS
-   ================================ */
-
 .container {
     width: min(100% - 32px, var(--largura));
     margin-inline: auto;
@@ -69,6 +65,11 @@ button {
     }
 }
 
+.logo-link img {
+    width: 150px;
+    height: auto;
+}
+
 .navegacao {
     display: flex;
     align-items: center;
@@ -77,6 +78,49 @@ button {
     @media (max-width: 768px) {
         display: none;
     }
+}
+
+.navegacao a {
+    position: relative;
+    padding: 8px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--marrom-escuro);
+}
+
+.navegacao a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--marrom);
+    transition: width 0.2s ease;
+}
+
+.navegacao a:hover::after,
+.navegacao a.ativo::after {
+    width: 100%;
+}
+
+.botao-doe {
+    padding: 9px 30px;
+    border-radius: 24px;
+    background-color: var(--verde);
+    color: #263000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 800;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.botao-doe:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.95);
+    background-color: var(--marrom-escuro);
+    color: var(--branco);
 }
 
 .menu-botao {
@@ -100,7 +144,7 @@ button {
     position: relative;
     padding-block: 90px 120px;
     background: linear-gradient(rgba(30, 12, 5, 0.6), rgba(30, 12, 5, 0.6)),
-                url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
     color: var(--branco);
     clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
 
@@ -385,11 +429,12 @@ button {
         }
     }
 }
+
 .hero-banner {
     position: relative;
     padding-block: 90px 120px;
     background: linear-gradient(rgba(30, 12, 5, 0.6), rgba(30, 12, 5, 0.6)),
-                url('Gemini_Generated_Image_uirr85uirr85uirr.jpg') center/cover no-repeat;
+        url('Gemini_Generated_Image_uirr85uirr85uirr.jpg') center/cover no-repeat;
     color: var(--branco);
     clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
 
@@ -448,6 +493,7 @@ button {
         color: var(--marrom-escuro);
     }
 }
+
 /*seção sorriso*/
 .sorrisos {
     padding-block: 60px 40px;
@@ -493,15 +539,16 @@ button {
         object-fit: cover;
     }
 }
+
 /*seção apoiadores*/
 
 .apoiadores {
-    padding-block: 15px 30px; 
+    padding-block: 15px 30px;
 }
 
 .tab-title {
     display: inline-block;
-    padding: 4px 16px; 
+    padding: 4px 16px;
     background-color: var(--marrom);
     color: var(--branco);
     border-radius: 6px 6px 0 0;
@@ -515,7 +562,7 @@ button {
 
 .box-apoiadores {
     background-color: var(--bege-escuro);
-    padding: 10px 20px; 
+    padding: 10px 20px;
     border-radius: 0 8px 8px 8px;
 }
 
@@ -535,13 +582,13 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.95rem; 
+    font-size: 0.95rem;
     font-weight: bold;
     color: var(--marrom-escuro);
 
-    
+
     img {
-        max-height: 22px; 
+        max-height: 22px;
         width: auto;
         object-fit: contain;
         opacity: 0.85;
@@ -565,8 +612,10 @@ button {
         color: #1a4d8c;
         font-size: 0.95rem;
     }
+
     /*seção rodape*/
 }
+
 .rodape {
     background-color: var(--marrom-escuro);
     color: var(--branco);
@@ -578,14 +627,14 @@ button {
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1.5fr;
     gap: 48px;
-    
+
     @media (max-width: 850px) {
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
         padding-block: 32px;
     }
 
-   
+
     @media (max-width: 500px) {
         grid-template-columns: 1fr;
         text-align: center;
@@ -619,6 +668,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 7px;
+
     @media (max-width: 500px) {
         align-items: center;
     }
@@ -654,6 +704,7 @@ button {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.65rem;
     opacity: 0.85;
+
     @media (max-width: 600px) {
         flex-direction: column;
         text-align: center;
@@ -676,6 +727,7 @@ button {
     align-items: center;
     gap: 12px;
     margin-top: 12px;
+
     @media (max-width: 500px) {
         justify-content: center;
     }
@@ -709,4 +761,196 @@ button {
 .botao-rede-social:focus-visible {
     outline: 2px solid #FFFFFF;
     outline-offset: 3px;
+}
+
+/* responsividade menu hamburguer */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: min(100% - 32px, 1200px);
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       CABEÇALHO MOBILE
+       ===================================================== */
+
+    .cabecalho {
+        position: sticky;
+        top: 0;
+        min-height: 70px;
+        background-color: var(--branco);
+        z-index: 1000;
+    }
+
+    .cabecalho-conteudo {
+        min-height: 70px;
+        width: 100%;
+        padding: 0 16px;
+        gap: 0;
+    }
+
+    .logo-link {
+        position: relative;
+        z-index: 1002;
+    }
+
+    .logo-link img {
+        width: 125px;
+    }
+
+
+    /* =====================================================
+       BOTÃO HAMBÚRGUER
+       ===================================================== */
+
+    .menu-botao {
+        position: relative;
+        z-index: 1003;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        padding: 0;
+
+        border: 0;
+        border-radius: 6px;
+
+        background-color: transparent;
+        color: var(--marrom-escuro);
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0;
+        cursor: pointer;
+    }
+
+    .menu-botao::before {
+        content: "☰";
+
+        font-size: 1.65rem;
+        line-height: 1;
+    }
+
+    .cabecalho.menu-aberto .menu-botao::before {
+        content: "×";
+        font-size: 2rem;
+        color: var(--branco);
+    }
+
+
+    /* responsividade menu hamburgue */
+
+    .cabecalho.menu-aberto {
+        background-color: var(--marrom-escuro);
+    }
+
+    .cabecalho.menu-aberto::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 290px;
+
+        background-color: var(--marrom-escuro);
+
+        z-index: 0;
+    }
+
+    .cabecalho.menu-aberto .logo-link img {
+        filter: brightness(0) invert(1);
+    }
+
+
+    /* =====================================================
+       MENU DE NAVEGAÇÃO MOBILE
+       ===================================================== */
+
+    .navegacao {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 0 16px;
+
+        background-color: var(--marrom-escuro);
+
+        z-index: 1001;
+    }
+
+    .navegacao.menu-aberto {
+        display: flex;
+    }
+
+    .navegacao a {
+        width: 100%;
+
+        padding: 12px 18px;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+        color: var(--branco);
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    .navegacao a::after {
+        display: none;
+    }
+
+    .navegacao a:hover {
+        color: var(--verde);
+    }
+
+    .navegacao a.ativo {
+        color: var(--branco);
+    }
+
+
+    /* =====================================================
+       BOTÃO DOE AGORA MOBILE
+       ===================================================== */
+
+    .cabecalho.menu-aberto .botao-doe {
+        position: absolute;
+        top: 210px;
+        left: 32px;
+        right: 32px;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 11px 20px;
+        border-radius: 24px;
+        background-color: var(--verde);
+        color: #263000;
+        font-size: 0.85rem;
+        z-index: 1002;
+    }
+
+    .cabecalho:not(.menu-aberto) .botao-doe {
+        display: none;
+    }
 }
