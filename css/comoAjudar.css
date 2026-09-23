@@ -243,3 +243,184 @@ button {
     object-fit: cover;
     object-position: center 45%;
 }
+
+.secao-doacao {
+    padding: 52px 0 66px;
+}
+
+.secao-doacao h2 {
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
+    border-radius: 0;
+}
+
+.secao-doacao > .container > p {
+    max-width: 1000px;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+}
+
+.pix h3 {
+    margin-bottom: 7px;
+    color: var(--marrom);
+    font-size: 1.35rem;
+}
+
+.pix > p {
+    margin-bottom: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+.pix-label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--marrom);
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.pix-chave {
+    display: inline-block;
+    border: 0;
+    border-radius: 0 25px 25px 0;
+    padding: 7px 18px;
+    background-color: var(--bege-escuro);
+    color: var(--marrom);
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.pix-chave:hover {
+    transform: translateX(4px);
+    background-color: #dccbb9;
+}
+
+.mensagem-copia {
+    display: block;
+    width: fit-content;
+    margin-top: 8px;
+    opacity: 0;
+    color: var(--marrom);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.82rem;
+    transition: opacity 0.2s ease;
+}
+
+.mensagem-copia.exibir {
+    opacity: 1;
+}
+
+.rodape {
+    background-color: var(--marrom-escuro);
+    color: var(--branco);
+}
+
+.rodape-conteudo {
+    min-height: 230px;
+    padding: 38px 0;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.5fr;
+    gap: 48px;
+}
+
+.rodape-marca img {
+    width: 90px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 12px;
+}
+
+.redes-sociais a {
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+}
+
+.rodape-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.rodape-coluna h3 {
+    margin-bottom: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.rodape-coluna a,
+.rodape-coluna p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.rodape-coluna a:hover {
+    text-decoration: underline;
+}
+
+.rodape-final {
+    min-height: 62px;
+    padding: 15px max(16px, calc((100% - var(--largura)) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.65rem;
+    opacity: 0.85;
+}
+
+.redes-sociais {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.botao-rede-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #B7D900;
+    color: #4A3728;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.botao-rede-social img {
+    width: 19px;
+    height: 19px;
+    margin-top: 2px;
+    object-fit: contain;
+}
+
+.botao-rede-social:hover {
+    background-color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.botao-rede-social:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 3px;
+}
