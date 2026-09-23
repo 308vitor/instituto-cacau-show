@@ -1,63 +1,138 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
+
+    <!-- =====================================================
+         CONFIGURAÇÕES DO DOCUMENTO
+         ===================================================== -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Saiba como ajudar o Instituto Cacau Show a transformar a Páscoa de crianças.">
+
     <title>Como ajudar | Instituto Cacau Show</title>
+
     <link rel="stylesheet" href="/css/comoAjudar.css">
+
 </head>
 
 <body>
+
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
+
     <header class="cabecalho">
+
         <div class="container cabecalho-conteudo">
+
             <a class="logo-link" href="#" aria-label="Página inicial do Instituto Cacau Show">
                 <img src="/assests/logo_header.svg" alt="Instituto Cacau Show">
             </a>
+
+            <!-- Botão do menu mobile -->
 
             <button class="menu-botao" id="menuBotao" type="button" aria-label="Abrir menu" aria-expanded="false"
                 aria-controls="menuPrincipal">
                 ☰
             </button>
 
+            <!-- Navegação principal -->
+
             <nav class="navegacao" id="menuPrincipal" aria-label="Navegação principal">
                 <a href="#inicio">Início</a>
+
                 <a href="#sobre">Sobre nós</a>
-                <a class="ativo" href="#ajudar" aria-current="page">Como ajudar</a>
+
+                <a class="ativo" href="#ajudar" aria-current="page">
+                    Como ajudar
+                </a>
             </nav>
 
-            <a class="botao-doe" href="#doacao">Doe agora</a>
+            <!-- Botão principal de doação -->
+
+            <a class="botao-doe" href="#doacao">
+                Doe agora
+            </a>
+
         </div>
+
     </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+         ===================================================== -->
+
     <main>
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
         <section class="hero" id="inicio" aria-labelledby="titulo-hero">
+
             <div class="hero-overlay"></div>
+
             <div class="container hero-conteudo">
-                <h1 id="titulo-hero">Existem várias formas<br>de espalhar alegria.</h1>
+
+                <h1 id="titulo-hero">
+                    Existem várias formas<br>
+                    de espalhar alegria.
+                </h1>
+
                 <p>
                     Nesta Páscoa, você pode fazer parte dessa transformação.
                     Escolha uma forma de ajudar e contribua para levar momentos
                     especiais a mais crianças.
                 </p>
+
             </div>
+
         </section>
+
+
+        <!-- =================================================
+             SEÇÃO DE INTRODUÇÃO
+             ================================================= -->
+
         <section class="secao-introducao" id="sobre" aria-labelledby="titulo-introducao">
+
             <div class="container">
-                <h2 id="titulo-introducao">Um brinquedo pode transformar um momento.</h2>
+
+                <h2 id="titulo-introducao">
+                    Um brinquedo pode transformar um momento.
+                </h2>
+
                 <p class="texto-introducao">
                     Doe brinquedos novos ou em bom estado e ajude a tornar a Páscoa
                     de uma criança mais especial.
                 </p>
 
                 <div class="imagem-destaque">
+
                     <img src="assests/img_conteudo.svg" alt="Crianças recebendo brinquedos durante uma ação de Páscoa">
+
                 </div>
+
             </div>
+
         </section>
+
+
+        <!-- =================================================
+             SEÇÃO DE DOAÇÃO
+             ================================================= -->
+
         <section class="secao-doacao" id="ajudar" aria-labelledby="titulo-ajudar">
+
             <div class="container">
-                <h2 id="titulo-ajudar">Sua contribuição pode transformar um momento.</h2>
+
+                <h2 id="titulo-ajudar">
+                    Sua contribuição pode transformar um momento.
+                </h2>
 
                 <p>
                     Existem várias formas de apoiar essa iniciativa. Com uma contribuição
@@ -65,11 +140,19 @@
                     alegria para crianças nesta Páscoa.
                 </p>
 
-                <div class="pix" id="doacao">
-                    <h3>DOE COM PIX</h3>
-                    <p>Uma forma simples e rápida de contribuir.</p>
+                <!-- Área do PIX -->
 
-                    <span class="pix-label">PIX:</span>
+                <div class="pix" id="doacao">
+
+                    <h3>DOE COM PIX</h3>
+
+                    <p>
+                        Uma forma simples e rápida de contribuir.
+                    </p>
+
+                    <span class="pix-label">
+                        PIX:
+                    </span>
 
                     <button class="pix-chave" id="pixChave" type="button" data-pix="instituto@exemplo.org"
                         aria-label="Copiar chave PIX">
@@ -79,17 +162,34 @@
                     <span class="mensagem-copia" id="mensagemCopia" role="status">
                         Chave PIX copiada!
                     </span>
+
                 </div>
+
             </div>
+
         </section>
+
     </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+         ===================================================== -->
+
     <footer class="rodape">
+
         <div class="container rodape-conteudo">
+
+            <!-- Marca e redes sociais -->
+
             <div class="rodape-marca">
+
                 <img src="assests/logo_footer.svg" alt="Instituto Cacau Show">
+
                 <div class="redes-sociais" aria-label="Redes sociais">
 
-                    <a href="https://www.instagram.com/institutocacaushow/" class="botao-rede-social" aria-label="Instagram">
+                    <a href="https://www.instagram.com/institutocacaushow/" class="botao-rede-social"
+                        aria-label="Instagram">
                         <img src="assests/icons/instagram.svg" alt="">
                     </a>
 
@@ -97,45 +197,91 @@
                         <img src="assests/icons/tiktok.svg" alt="">
                     </a>
 
-                    <a href="https://www.youtube.com/c/InstitutoCacauShow" class="botao-rede-social" aria-label="YouTube">
+                    <a href="https://www.youtube.com/c/InstitutoCacauShow" class="botao-rede-social"
+                        aria-label="YouTube">
                         <img src="assests/icons/youtube.svg" alt="">
                     </a>
 
                 </div>
+
             </div>
 
+
+            <!-- Coluna de navegação -->
+
             <div class="rodape-coluna">
+
                 <h3>Navegação</h3>
+
                 <a href="#inicio">Início</a>
                 <a href="#sobre">Sobre nós</a>
                 <a href="#ajudar">Como ajudar</a>
                 <a href="#doacao">Doe agora</a>
+
             </div>
 
+
+            <!-- Coluna institucional -->
+
             <div class="rodape-coluna">
+
                 <h3>Institucional</h3>
+
                 <a href="#">Conta</a>
                 <a href="#">Transparência</a>
                 <a href="#">Projetos</a>
                 <a href="#">Contato</a>
+
             </div>
 
+
+            <!-- Coluna de contato -->
+
             <div class="rodape-coluna contato">
+
                 <h3>Contato</h3>
+
                 <a href="mailto:contato@institutocacaushow.org.br">
                     contato@institutocacaushow.org.br
                 </a>
-                <a href="tel:+551122327800">11 2232-7800</a>
-                <p>Av. Cacau Show, Itapevi - SP<br>CEP 06696-000</p>
+
+                <a href="tel:+551122327800">
+                    11 2232-7800
+                </a>
+
+                <p>
+                    Av. Cacau Show, Itapevi - SP<br>
+                    CEP 06696-000
+                </p>
+
             </div>
+
         </div>
 
+
+        <!-- Informações finais -->
+
         <div class="rodape-final">
-            <p>© 2024 Instituto Cacau Show. Todos os direitos reservados.</p>
-            <a href="#">Política de Privacidade</a>
+
+            <p>
+                © 2024 Instituto Cacau Show. Todos os direitos reservados.
+            </p>
+
+            <a href="#">
+                Política de Privacidade
+            </a>
+
         </div>
+
     </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
     <script src="/js/comoAjudar.js"></script>
+
 </body>
 
 </html>

@@ -1,6 +1,6 @@
-/* ---------------------------------
-          RESETs GERAIS
---------------------------------- */
+/* =========================================================
+   RESET GERAIS
+   ========================================================= */
 
 :root {
     --bege: #f7f0e5;
@@ -44,32 +44,37 @@ button {
     font: inherit;
 }
 
-/* ---------------------------------
-          CLASSES REUTILIZAVEIS
---------------------------------- */
+
+/* =========================================================
+   CLASSES REUTILIZÁVEIS
+   ========================================================= */
 
 .container {
     width: min(100% - 32px, var(--largura));
     margin-inline: auto;
 }
 
-/* ---------------------------------
-             HEADER
---------------------------------- */
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .cabecalho {
     position: sticky;
     top: 0;
     z-index: 100;
+
     background-color: var(--branco);
     border-bottom: 1px solid #ddd3c8;
 }
 
 .cabecalho-conteudo {
     min-height: 78px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 32px;
 }
 
@@ -78,29 +83,42 @@ button {
     height: auto;
 }
 
+
+/* -------------------------
+   NAVEGAÇÃO
+   ------------------------- */
+
 .navegacao {
     display: flex;
     align-items: center;
+
     gap: 38px;
 }
 
 .navegacao a {
     position: relative;
+
     padding: 8px 0;
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.82rem;
     font-weight: 700;
+
     color: var(--marrom-escuro);
 }
 
 .navegacao a::after {
     content: "";
+
     position: absolute;
     left: 0;
     bottom: 2px;
+
     width: 0;
     height: 2px;
+
     background-color: var(--marrom);
+
     transition: width 0.2s ease;
 }
 
@@ -109,15 +127,26 @@ button {
     width: 100%;
 }
 
+
+/* -------------------------
+   BOTÃO DOE AGORA
+   ------------------------- */
+
 .botao-doe {
     padding: 9px 30px;
+
     border-radius: 24px;
+
     background-color: var(--verde);
     color: #263000;
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.78rem;
     font-weight: 800;
-    transition: transform 0.2s ease, filter 0.2s ease;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
 }
 
 .botao-doe:hover {
@@ -125,69 +154,98 @@ button {
     filter: brightness(0.95);
 }
 
+
+/* -------------------------
+   BOTÃO MENU MOBILE
+   ------------------------- */
+
 .menu-botao {
     display: none;
+
     border: 0;
+
     background: transparent;
     color: var(--marrom);
+
     font-size: 1.7rem;
+
     cursor: pointer;
 }
 
-/* ---------------------------------
-               HERO
---------------------------------- */
+
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .hero {
     min-height: 470px;
+
     position: relative;
+
     display: flex;
     align-items: center;
+
     overflow: hidden;
+
     background-image: url("/assests/img_hero.svg");
     background-size: cover;
     background-position: center;
+
     color: var(--branco);
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
+
     background-color: rgba(47, 19, 9, 0.58);
 }
 
 .hero-conteudo {
     position: relative;
     z-index: 1;
+
     padding-block: 80px;
 }
 
 .hero h1 {
     max-width: 650px;
+
     margin-bottom: 22px;
+
     font-size: clamp(2rem, 4vw, 3.2rem);
     line-height: 1.12;
 }
 
 .hero p {
     max-width: 850px;
+
     font-size: clamp(1rem, 1.7vw, 1.25rem);
 }
 
 .hero::after {
     content: "";
+
     position: absolute;
     left: -2%;
     bottom: -1px;
+
     width: 104%;
     height: 62px;
+
     background-color: var(--bege);
-    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+
+    clip-path: polygon(
+        0 100%,
+        100% 0,
+        100% 100%
+    );
 }
 
-/* ---------------------------------
-          SEÇÃO INTRODUÇÃO
---------------------------------- */
+
+/* =========================================================
+   SEÇÃO INTRODUÇÃO
+   ========================================================= */
 
 .secao-introducao {
     padding: 58px 0 0;
@@ -196,29 +254,39 @@ button {
 .secao-introducao h2,
 .secao-doacao h2 {
     display: inline-block;
+
     max-width: 100%;
+
     margin-bottom: 25px;
     padding: 8px 22px;
+
     border-radius: 0 24px 24px 0;
+
     background-color: var(--bege-escuro);
     color: var(--marrom);
+
     font-size: clamp(1.55rem, 3vw, 2.15rem);
     line-height: 1.2;
 }
 
 .texto-introducao {
-    margin-bottom: 34px;
+    margin-bottom: 50px;
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.95rem;
-    margin-bottom: 50px;
 }
+
+
+/* -------------------------
+   IMAGEM DE DESTAQUE
+   ------------------------- */
 
 .imagem-destaque {
     position: relative;
 
     width: 100vw;
-    margin-left: calc(50% - 50vw);
 
+    margin-left: calc(50% - 50vw);
     margin-top: 20px;
 
     overflow: hidden;
@@ -259,15 +327,18 @@ button {
 
 .imagem-destaque img {
     display: block;
+
     width: 100%;
     height: 520px;
+
     object-fit: cover;
     object-position: center 45%;
 }
 
-/* ---------------------------------
-          SEÇÃO DOAÇÃO
---------------------------------- */
+
+/* =========================================================
+   SEÇÃO DOAÇÃO
+   ========================================================= */
 
 .secao-doacao {
     padding: 52px 0 66px;
@@ -276,63 +347,93 @@ button {
 .secao-doacao h2 {
     padding-left: 0;
     padding-right: 0;
+
     background: transparent;
+
     border-radius: 0;
 }
 
 .secao-doacao > .container > p {
     max-width: 1000px;
+
     margin-bottom: 30px;
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.95rem;
 }
 
+
+/* -------------------------
+   PIX
+   ------------------------- */
+
 .pix h3 {
     margin-bottom: 7px;
+
     color: var(--marrom);
+
     font-size: 1.35rem;
 }
 
 .pix > p {
     margin-bottom: 24px;
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9rem;
 }
 
 .pix-label {
     display: block;
+
     margin-bottom: 4px;
+
     color: var(--marrom);
+
     font-size: 1.7rem;
     font-weight: 700;
 }
 
 .pix-chave {
     display: inline-block;
+
     border: 0;
     border-radius: 0 25px 25px 0;
+
     padding: 7px 18px;
+
     background-color: var(--bege-escuro);
     color: var(--marrom);
+
     font-size: 1.5rem;
     font-weight: 700;
+
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
 }
 
 .pix-chave:hover {
     transform: translateX(4px);
+
     background-color: #dccbb9;
 }
 
 .mensagem-copia {
     display: block;
+
     width: fit-content;
+
     margin-top: 8px;
+
     opacity: 0;
+
     color: var(--marrom);
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.82rem;
+
     transition: opacity 0.2s ease;
 }
 
@@ -340,9 +441,10 @@ button {
     opacity: 1;
 }
 
-/* ---------------------------------
-              FOOTER
---------------------------------- */
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 .rodape {
     background-color: var(--marrom-escuro);
@@ -351,42 +453,101 @@ button {
 
 .rodape-conteudo {
     min-height: 230px;
+
     padding: 38px 0;
+
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1.5fr;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1fr
+        1.5fr;
+
     gap: 48px;
 }
 
+
+/* -------------------------
+   MARCA
+   ------------------------- */
+
 .rodape-marca img {
     width: 90px;
+
     margin-bottom: 20px;
+
     border-radius: 50%;
 }
+
+
+/* -------------------------
+   REDES SOCIAIS
+   ------------------------- */
 
 .redes-sociais {
     display: flex;
+    align-items: center;
+
     gap: 12px;
+    margin-top: 12px;
 }
 
-.redes-sociais a {
-    width: 25px;
-    height: 25px;
-    display: grid;
-    place-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.55);
+.botao-rede-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
     border-radius: 50%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.7rem;
+
+    background-color: #B7D900;
+    color: #4A3728;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
 }
+
+.botao-rede-social img {
+    width: 19px;
+    height: 19px;
+
+    margin-top: 20px;
+
+    object-fit: contain;
+}
+
+.botao-rede-social:hover {
+    background-color: #FFFFFF;
+
+    transform: translateY(-2px);
+}
+
+.botao-rede-social:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 3px;
+}
+
+
+/* -------------------------
+   COLUNAS
+   ------------------------- */
 
 .rodape-coluna {
     display: flex;
     flex-direction: column;
+
     gap: 7px;
 }
 
 .rodape-coluna h3 {
     margin-bottom: 6px;
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.78rem;
     font-weight: 700;
@@ -397,6 +558,7 @@ button {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.7rem;
     line-height: 1.5;
+
     opacity: 0.9;
 }
 
@@ -404,55 +566,33 @@ button {
     text-decoration: underline;
 }
 
+
+/* -------------------------
+   PARTE FINAL DO FOOTER
+   ------------------------- */
+
 .rodape-final {
     min-height: 62px;
-    padding: 15px max(16px, calc((100% - var(--largura)) / 2));
+
+    padding: 15px max(
+        16px,
+        calc((100% - var(--largura)) / 2)
+    );
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 20px;
+
     border-top: 1px solid rgba(255, 255, 255, 0.12);
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.65rem;
+
     opacity: 0.85;
 }
 
-.redes-sociais {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 12px;
-}
-
-.botao-rede-social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background-color: #B7D900;
-    color: #4A3728;
-    text-decoration: none;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.botao-rede-social img {
-    width: 19px;
-    height: 19px;
-    margin-top: 2px;
-    object-fit: contain;
-}
-
-.botao-rede-social:hover {
-    background-color: #FFFFFF;
-    transform: translateY(-2px);
-}
-
-.botao-rede-social:focus-visible {
-    outline: 2px solid #FFFFFF;
-    outline-offset: 3px;
-}
 
 /* =========================================================
    RESPONSIVIDADE MOBILE
@@ -480,20 +620,27 @@ button {
     .cabecalho {
         position: sticky;
         top: 0;
+
         min-height: 70px;
+
         background-color: var(--branco);
+
         z-index: 1000;
     }
 
     .cabecalho-conteudo {
         min-height: 70px;
+
         width: 100%;
+
         padding: 0 16px;
+
         gap: 0;
     }
 
     .logo-link {
         position: relative;
+
         z-index: 1002;
     }
 
@@ -508,6 +655,7 @@ button {
 
     .menu-botao {
         position: relative;
+
         z-index: 1003;
 
         display: flex;
@@ -527,6 +675,7 @@ button {
 
         font-family: Arial, Helvetica, sans-serif;
         font-size: 0;
+
         cursor: pointer;
     }
 
@@ -539,6 +688,7 @@ button {
 
     .cabecalho.menu-aberto .menu-botao::before {
         content: "×";
+
         font-size: 2rem;
         color: var(--branco);
     }
@@ -634,18 +784,26 @@ button {
 
     .cabecalho.menu-aberto .botao-doe {
         position: absolute;
+
         top: 210px;
         left: 32px;
         right: 32px;
+
         width: auto;
+
         display: flex;
         align-items: center;
         justify-content: center;
+
         padding: 11px 20px;
+
         border-radius: 24px;
+
         background-color: var(--verde);
         color: #263000;
+
         font-size: 0.85rem;
+
         z-index: 1002;
     }
 
@@ -746,10 +904,12 @@ button {
 
         height: 30px;
 
-        clip-path: polygon(0 100%,
-                100% 0,
-                100% 0,
-                0 0);
+        clip-path: polygon(
+            0 100%,
+            100% 0,
+            100% 0,
+            0 0
+        );
     }
 
     .imagem-destaque::after {
@@ -761,7 +921,6 @@ button {
         height: 245px;
 
         object-fit: cover;
-
         object-position: center 45%;
     }
 
@@ -785,7 +944,7 @@ button {
         line-height: 1.35;
     }
 
-    .secao-doacao>.container>p {
+    .secao-doacao > .container > p {
         max-width: 100%;
 
         margin-bottom: 28px;
@@ -807,7 +966,7 @@ button {
         font-size: 1rem;
     }
 
-    .pix>p {
+    .pix > p {
         margin-bottom: 18px;
 
         font-size: 0.7rem;
@@ -846,17 +1005,11 @@ button {
     .rodape-conteudo {
         min-height: auto;
 
-        padding: 22px 0 18px;
-
-        padding-left: 25px;
-
-        padding-right: 25px;
+        padding: 22px 25px 18px;
 
         justify-content: space-between;
 
         display: flex;
-
-        grid-template-columns: 1fr 1fr 1fr;
 
         gap: 14px;
     }
@@ -868,6 +1021,7 @@ button {
 
     .rodape-marca {
         grid-column: 1 / -1;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -875,12 +1029,14 @@ button {
 
     .rodape-marca img {
         width: 58px;
+
         margin-bottom: 10px;
     }
 
     .redes-sociais {
         display: flex;
         align-items: center;
+
         gap: 7px;
         margin-top: 0;
     }
@@ -893,6 +1049,7 @@ button {
     .botao-rede-social img {
         width: 14px;
         height: 14px;
+
         margin: 0;
     }
 
@@ -907,6 +1064,7 @@ button {
 
     .rodape-coluna h3 {
         margin-bottom: 4px;
+
         font-size: 0.55rem;
     }
 
@@ -927,13 +1085,15 @@ button {
 
     .rodape-final {
         min-height: 42px;
-        padding: 9px 16px;
-        padding-left: 30px;
-        padding-right: 30px;
+
+        padding: 9px 30px;
+
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         gap: 10px;
+
         font-size: 0.42rem;
         text-align: left;
     }
@@ -992,5 +1152,5 @@ button {
 
 
 /* =========================================================
-   FIM DA RESPONSIVIDADE MOBILE
+   FIM DO CSS
    ========================================================= */

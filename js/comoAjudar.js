@@ -35,7 +35,10 @@ function fecharMenu() {
     cabecalho.classList.remove("menu-aberto");
     menuPrincipal.classList.remove("menu-aberto");
 
-    menuBotao.setAttribute("aria-expanded", "false");
+    menuBotao.setAttribute(
+        "aria-expanded",
+        "false"
+    );
 
     menuBotao.setAttribute(
         "aria-label",
@@ -54,9 +57,7 @@ const linksMenu = menuPrincipal.querySelectorAll("a");
 linksMenu.forEach(function (link) {
 
     link.addEventListener("click", function () {
-
         fecharMenu();
-
     });
 
 });
@@ -76,9 +77,7 @@ document.addEventListener("click", function (evento) {
         !clicouNoMenu &&
         !clicouNoBotao
     ) {
-
         fecharMenu();
-
     }
 
 });
@@ -94,11 +93,8 @@ document.addEventListener("keydown", function (evento) {
         evento.key === "Escape" &&
         cabecalho.classList.contains("menu-aberto")
     ) {
-
         fecharMenu();
-
         menuBotao.focus();
-
     }
 
 });
@@ -111,9 +107,7 @@ document.addEventListener("keydown", function (evento) {
 window.addEventListener("resize", function () {
 
     if (window.innerWidth > 768) {
-
         fecharMenu();
-
     }
 
 });
@@ -135,7 +129,6 @@ pixChave.addEventListener("click", async function () {
         await navigator.clipboard.writeText(chavePix);
 
         mensagemCopia.textContent = "Chave PIX copiada!";
-
         mensagemCopia.classList.add("exibir");
 
         setTimeout(function () {
