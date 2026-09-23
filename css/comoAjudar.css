@@ -1,3 +1,7 @@
+/* ---------------------------------
+          RESETs GERAIS
+--------------------------------- */
+
 :root {
     --bege: #f7f0e5;
     --bege-escuro: #e7d9ca;
@@ -40,10 +44,18 @@ button {
     font: inherit;
 }
 
+/* ---------------------------------
+          CLASSES REUTILIZAVEIS
+--------------------------------- */
+
 .container {
     width: min(100% - 32px, var(--largura));
     margin-inline: auto;
 }
+
+/* ---------------------------------
+             HEADER
+--------------------------------- */
 
 .cabecalho {
     position: sticky;
@@ -122,6 +134,10 @@ button {
     cursor: pointer;
 }
 
+/* ---------------------------------
+               HERO
+--------------------------------- */
+
 .hero {
     min-height: 470px;
     position: relative;
@@ -169,6 +185,10 @@ button {
     clip-path: polygon(0 100%, 100% 0, 100% 100%);
 }
 
+/* ---------------------------------
+          SEÇÃO INTRODUÇÃO
+--------------------------------- */
+
 .secao-introducao {
     padding: 58px 0 0;
 }
@@ -190,6 +210,7 @@ button {
     margin-bottom: 34px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.95rem;
+    margin-bottom: 50px;
 }
 
 .imagem-destaque {
@@ -243,6 +264,10 @@ button {
     object-fit: cover;
     object-position: center 45%;
 }
+
+/* ---------------------------------
+          SEÇÃO DOAÇÃO
+--------------------------------- */
 
 .secao-doacao {
     padding: 52px 0 66px;
@@ -314,6 +339,10 @@ button {
 .mensagem-copia.exibir {
     opacity: 1;
 }
+
+/* ---------------------------------
+              FOOTER
+--------------------------------- */
 
 .rodape {
     background-color: var(--marrom-escuro);
@@ -424,3 +453,544 @@ button {
     outline: 2px solid #FFFFFF;
     outline-offset: 3px;
 }
+
+/* =========================================================
+   RESPONSIVIDADE MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =====================================================
+       CONFIGURAÇÕES GERAIS MOBILE
+       ===================================================== */
+
+    .container {
+        width: min(100% - 32px, 1200px);
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       CABEÇALHO MOBILE
+       ===================================================== */
+
+    .cabecalho {
+        position: sticky;
+        top: 0;
+        min-height: 70px;
+        background-color: var(--branco);
+        z-index: 1000;
+    }
+
+    .cabecalho-conteudo {
+        min-height: 70px;
+        width: 100%;
+        padding: 0 16px;
+        gap: 0;
+    }
+
+    .logo-link {
+        position: relative;
+        z-index: 1002;
+    }
+
+    .logo-link img {
+        width: 125px;
+    }
+
+
+    /* =====================================================
+       BOTÃO HAMBÚRGUER
+       ===================================================== */
+
+    .menu-botao {
+        position: relative;
+        z-index: 1003;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        padding: 0;
+
+        border: 0;
+        border-radius: 6px;
+
+        background-color: transparent;
+        color: var(--marrom-escuro);
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0;
+        cursor: pointer;
+    }
+
+    .menu-botao::before {
+        content: "☰";
+
+        font-size: 1.65rem;
+        line-height: 1;
+    }
+
+    .cabecalho.menu-aberto .menu-botao::before {
+        content: "×";
+        font-size: 2rem;
+        color: var(--branco);
+    }
+
+
+    /* =====================================================
+       FUNDO DO MENU ABERTO
+       ===================================================== */
+
+    .cabecalho.menu-aberto {
+        background-color: var(--marrom-escuro);
+    }
+
+    .cabecalho.menu-aberto::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 290px;
+
+        background-color: var(--marrom-escuro);
+
+        z-index: 0;
+    }
+
+    .cabecalho.menu-aberto .logo-link img {
+        filter: brightness(0) invert(1);
+    }
+
+
+    /* =====================================================
+       MENU DE NAVEGAÇÃO MOBILE
+       ===================================================== */
+
+    .navegacao {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 0 16px;
+
+        background-color: var(--marrom-escuro);
+
+        z-index: 1001;
+    }
+
+    .navegacao.menu-aberto {
+        display: flex;
+    }
+
+    .navegacao a {
+        width: 100%;
+
+        padding: 12px 18px;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+        color: var(--branco);
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    .navegacao a::after {
+        display: none;
+    }
+
+    .navegacao a:hover {
+        color: var(--verde);
+    }
+
+    .navegacao a.ativo {
+        color: var(--branco);
+    }
+
+
+    /* =====================================================
+       BOTÃO DOE AGORA MOBILE
+       ===================================================== */
+
+    .cabecalho.menu-aberto .botao-doe {
+        position: absolute;
+        top: 210px;
+        left: 32px;
+        right: 32px;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 11px 20px;
+        border-radius: 24px;
+        background-color: var(--verde);
+        color: #263000;
+        font-size: 0.85rem;
+        z-index: 1002;
+    }
+
+    .cabecalho:not(.menu-aberto) .botao-doe {
+        display: none;
+    }
+
+
+    /* =====================================================
+       HERO MOBILE
+       ===================================================== */
+
+    .hero {
+        min-height: 390px;
+
+        background-position: center;
+    }
+
+    .hero-overlay {
+        background-color: rgba(47, 19, 9, 0.58);
+    }
+
+    .hero-conteudo {
+        padding: 95px 0 70px;
+    }
+
+    .hero h1 {
+        max-width: 320px;
+
+        margin-bottom: 16px;
+
+        font-size: clamp(1.8rem, 8vw, 2.35rem);
+        line-height: 1.08;
+    }
+
+    .hero p {
+        max-width: 330px;
+
+        font-size: 0.78rem;
+        line-height: 1.35;
+    }
+
+    .hero::after {
+        height: 42px;
+    }
+
+
+    /* =====================================================
+       SEÇÃO INTRODUÇÃO MOBILE
+       ===================================================== */
+
+    .secao-introducao {
+        padding: 38px 0 0;
+    }
+
+    .secao-introducao h2,
+    .secao-doacao h2 {
+        display: block;
+
+        width: fit-content;
+        max-width: 100%;
+
+        margin-bottom: 22px;
+
+        padding: 7px 13px;
+
+        border-radius: 0 18px 18px 0;
+
+        font-size: 0.72rem;
+        line-height: 1.3;
+    }
+
+    .texto-introducao {
+        margin-bottom: 26px;
+
+        font-size: 0.68rem;
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       IMAGEM DE DESTAQUE MOBILE
+       ===================================================== */
+
+    .imagem-destaque {
+        position: relative;
+
+        width: 100vw;
+
+        margin-left: calc(50% - 50vw);
+        margin-top: 16px;
+
+        overflow: hidden;
+    }
+
+    .imagem-destaque::before {
+        top: -1px;
+
+        height: 30px;
+
+        clip-path: polygon(0 100%,
+                100% 0,
+                100% 0,
+                0 0);
+    }
+
+    .imagem-destaque::after {
+        background-color: rgba(0, 0, 0, 0.30);
+    }
+
+    .imagem-destaque img {
+        width: 100%;
+        height: 245px;
+
+        object-fit: cover;
+
+        object-position: center 45%;
+    }
+
+
+    /* =====================================================
+       SEÇÃO DE DOAÇÃO MOBILE
+       ===================================================== */
+
+    .secao-doacao {
+        padding: 38px 0 45px;
+    }
+
+    .secao-doacao h2 {
+        padding: 0;
+
+        background: transparent;
+
+        border-radius: 0;
+
+        font-size: 0.75rem;
+        line-height: 1.35;
+    }
+
+    .secao-doacao>.container>p {
+        max-width: 100%;
+
+        margin-bottom: 28px;
+
+        font-size: 0.68rem;
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       PIX MOBILE
+       ===================================================== */
+
+    .pix h3 {
+        margin-bottom: 12px;
+
+        color: var(--marrom);
+
+        font-size: 1rem;
+    }
+
+    .pix>p {
+        margin-bottom: 18px;
+
+        font-size: 0.7rem;
+        line-height: 1.45;
+    }
+
+    .pix-label {
+        margin-bottom: 5px;
+
+        font-size: 1rem;
+    }
+
+    .pix-chave {
+        max-width: 100%;
+
+        padding: 6px 12px;
+
+        font-size: 0.8rem;
+
+        overflow-wrap: anywhere;
+    }
+
+    .mensagem-copia {
+        font-size: 0.68rem;
+    }
+
+
+    /* =====================================================
+       RODAPÉ MOBILE
+       ===================================================== */
+
+    .rodape {
+        background-color: var(--marrom-escuro);
+    }
+
+    .rodape-conteudo {
+        min-height: auto;
+
+        padding: 22px 0 18px;
+
+        padding-left: 25px;
+
+        padding-right: 25px;
+
+        justify-content: space-between;
+
+        display: flex;
+
+        grid-template-columns: 1fr 1fr 1fr;
+
+        gap: 14px;
+    }
+
+
+    /* =====================================================
+       MARCA DO RODAPÉ
+       ===================================================== */
+
+    .rodape-marca {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodape-marca img {
+        width: 58px;
+        margin-bottom: 10px;
+    }
+
+    .redes-sociais {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-top: 0;
+    }
+
+    .botao-rede-social {
+        width: 24px;
+        height: 24px;
+    }
+
+    .botao-rede-social img {
+        width: 14px;
+        height: 14px;
+        margin: 0;
+    }
+
+
+    /* =====================================================
+       COLUNAS DO RODAPÉ
+       ===================================================== */
+
+    .rodape-coluna {
+        gap: 4px;
+    }
+
+    .rodape-coluna h3 {
+        margin-bottom: 4px;
+        font-size: 0.55rem;
+    }
+
+    .rodape-coluna a,
+    .rodape-coluna p {
+        font-size: 0.52rem;
+        line-height: 1.5;
+    }
+
+    .rodape-coluna.contato {
+        display: none;
+    }
+
+
+    /* =====================================================
+       PARTE FINAL DO RODAPÉ
+       ===================================================== */
+
+    .rodape-final {
+        min-height: 42px;
+        padding: 9px 16px;
+        padding-left: 30px;
+        padding-right: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 0.42rem;
+        text-align: left;
+    }
+
+    .rodape-final p {
+        max-width: 65%;
+    }
+
+    .rodape-final a {
+        white-space: nowrap;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .logo-link img {
+        width: 112px;
+    }
+
+    .hero {
+        min-height: 370px;
+    }
+
+    .hero-conteudo {
+        padding-top: 85px;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 0.72rem;
+    }
+
+    .imagem-destaque img {
+        height: 225px;
+    }
+
+    .secao-introducao h2,
+    .secao-doacao h2 {
+        font-size: 0.68rem;
+    }
+
+    .rodape-conteudo {
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   FIM DA RESPONSIVIDADE MOBILE
+   ========================================================= */
