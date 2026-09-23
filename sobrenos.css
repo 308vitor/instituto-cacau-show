@@ -493,3 +493,76 @@ button {
         object-fit: cover;
     }
 }
+/*seção apoiadores*/
+
+.apoiadores {
+    padding-block: 15px 30px; 
+}
+
+.tab-title {
+    display: inline-block;
+    padding: 4px 16px; 
+    background-color: var(--marrom);
+    color: var(--branco);
+    border-radius: 6px 6px 0 0;
+
+    h3 {
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+}
+
+.box-apoiadores {
+    background-color: var(--bege-escuro);
+    padding: 10px 20px; 
+    border-radius: 0 8px 8px 8px;
+}
+
+.logos-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 16px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem; 
+    font-weight: bold;
+    color: var(--marrom-escuro);
+
+    
+    img {
+        max-height: 22px; 
+        width: auto;
+        object-fit: contain;
+        opacity: 0.85;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &.ambev {
+        font-family: Arial, sans-serif;
+        color: #0046ad;
+        font-weight: 800;
+        text-transform: lowercase;
+        font-size: 1rem;
+    }
+
+    &.nestle {
+        font-family: Arial, sans-serif;
+        color: #1a4d8c;
+        font-size: 0.95rem;
+    }
+}
