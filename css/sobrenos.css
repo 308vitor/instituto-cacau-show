@@ -434,7 +434,7 @@ button {
     position: relative;
     padding-block: 90px 120px;
     background: linear-gradient(rgba(30, 12, 5, 0.6), rgba(30, 12, 5, 0.6)),
-        url('Gemini_Generated_Image_uirr85uirr85uirr.jpg') center/cover no-repeat;
+        url('../assets/images/Gemini_Generated_Image_uirr85uirr85uirr.jpg') center/cover no-repeat;
     color: var(--branco);
     clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
 

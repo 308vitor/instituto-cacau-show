@@ -131,7 +131,7 @@ header {
             rgba(71, 31, 17, 0.58),
             rgba(71, 31, 17, 0.58)
         ),
-        url("baner.jpeg");
+        url("../assets/images/baner.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -238,7 +238,7 @@ font-size: 90px;
     display: flex;
     align-items: center;
     overflow: hidden;
-    background-image: url("/assests/img_hero.svg");
+    background-image: url("../assets/images/img_hero.svg");
     background-size: cover;
     background-position: center;
     color: var(--branco);
@@ -269,7 +269,7 @@ font-size: 90px;
             rgba(71, 31, 17, 0.58),
             rgba(71, 31, 17, 0.58)
         ),
-        url("baner.jpeg");
+        url("../assets/images/baner.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -353,27 +353,27 @@ font-size: 90px;
     margin-bottom: 10px;
 }
 
-.forma p {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 15px;
-    line-height: 1.5;
-    margin-bottom: 25px;
-}
-
-.forma button {
+.forma .botao-doacao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     min-width: 145px;
-    height: 38px;
-    padding: 0 25px;
-    border: none;
+    min-height: 38px;
+    padding: 8px 25px;
+    border: 0;
     border-radius: 8px;
     background-color: #522719;
     color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 10px;
     font-weight: bold;
-    transition: 0.2s;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
 }
 
-.forma button:hover {
+.forma .botao-doacao:hover {
     background-color: #713b28;
 }
 
@@ -656,4 +656,112 @@ footer {
     align-items: center;
     gap: 12px;
     margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: auto;
+        min-height: 360px;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .bannerconteiner {
+        width: 100%;
+        max-width: 100%;
+        min-height: 0;
+        padding: 80px 20px 60px;
+    }
+
+    .banner h1 {
+        max-width: 100%;
+        font-size: clamp(30px, 8vw, 36px);
+        overflow-wrap: break-word;
+    }
+
+    .banner p {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .cabecalho-conteudo {
+        position: relative;
+        gap: 12px;
+        padding: 0 16px;
+    }
+
+    .logo-link img {
+        width: 120px;
+    }
+
+    .menu-botao {
+        display: block;
+        margin-left: auto;
+    }
+
+    .botao-doe {
+        padding: 8px 14px;
+        font-size: 0.68rem;
+    }
+
+    .navegacao {
+        display: none;
+    }
+
+    .navegacao.menu-aberto {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 16px;
+        background-color: #ffffff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .navegacao.menu-aberto a {
+        padding: 12px 0;
+    }
+
+    .formas {
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+    }
+
+    .forma {
+        width: min(100%, 320px);
+    }
+
+    .coleta {
+        padding: 25px 20px 50px;
+    }
+
+    .logos {
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .logos img {
+        width: min(40%, 140px);
+        max-height: 75px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 18px;
+        padding: 32px 20px;
+    }
+
+    .rodape-marca,
+    .rodape-coluna.contato {
+        grid-column: 1 / -1;
+    }
 }
